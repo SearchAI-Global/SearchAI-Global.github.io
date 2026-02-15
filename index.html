@@ -6,7 +6,7 @@
     <title>Search AI Global | AI Policy & Regulation Data Access</title>
     <meta
       name="description"
-      content="Search AI Global provides premium access to curated AI policy and regulation datasets."
+      content="Search AI Global provides access to a curated AI policy and regulation dataset."
     />
     <style>
       :root {
@@ -52,30 +52,41 @@
       }
 
       header {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
         align-items: center;
-        justify-content: space-between;
         gap: 16px;
-        padding: 16px 0 48px;
+        padding: 16px 0 32px;
       }
 
       .logo {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 10px;
         font-weight: 600;
         letter-spacing: 0.4px;
+        font-size: 14px;
+        justify-self: start;
       }
 
       .logo-mark {
-        width: 42px;
-        height: 42px;
-        border-radius: 14px;
-        background: linear-gradient(140deg, var(--accent), var(--accent-2));
-        display: grid;
-        place-items: center;
-        font-weight: 700;
-        color: #0a0d13;
+        height: 44px;
+        width: auto;
+        border-radius: 0;
+        overflow: visible;
+        border: none;
+        background: transparent;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .logo-mark img {
+        height: 44px;
+        width: auto;
+        object-fit: contain;
+        display: block;
       }
 
       nav {
@@ -83,6 +94,7 @@
         gap: 20px;
         font-size: 14px;
         color: var(--muted);
+        justify-self: center;
       }
 
       .cta-btn {
@@ -96,6 +108,20 @@
         font-weight: 600;
         border: none;
         box-shadow: 0 18px 35px rgba(91, 124, 250, 0.35);
+        transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+        justify-self: end;
+      }
+
+      .cta-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 22px 50px rgba(91, 124, 250, 0.48);
+        filter: brightness(1.03);
+      }
+
+      .cta-btn:active {
+        transform: translateY(0);
+        box-shadow: 0 16px 30px rgba(91, 124, 250, 0.35);
+        filter: brightness(0.99);
       }
 
       .hero {
@@ -103,26 +129,18 @@
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 36px;
         align-items: center;
-        padding: 12px 0 72px;
+        margin-top: 0;
+        padding: 0 0 28px;
       }
 
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 8px 14px;
-        border-radius: 999px;
-        border: 1px solid var(--line);
-        background: rgba(18, 24, 38, 0.7);
-        color: var(--muted);
-        font-size: 12px;
-        letter-spacing: 0.3px;
+      .hero + section {
+        margin-top: 36px;
       }
 
       h1 {
         font-size: clamp(2.4rem, 4vw, 3.7rem);
         line-height: 1.08;
-        margin: 18px 0 16px;
+        margin: 10px 0 12px;
       }
 
       p {
@@ -142,6 +160,17 @@
         border: 1px solid var(--line);
         color: var(--ink);
         font-weight: 500;
+        transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      }
+
+      .ghost-btn:hover {
+        transform: translateY(-1px);
+        border-color: rgba(255, 255, 255, 0.18);
+        background: rgba(18, 24, 38, 0.35);
+      }
+
+      .ghost-btn:active {
+        transform: translateY(0);
       }
 
       .hero-card {
@@ -179,7 +208,7 @@
       }
 
       section {
-        margin-top: 80px;
+        margin-top: 64px;
       }
 
       .section-title {
@@ -207,6 +236,57 @@
         padding: 22px;
       }
 
+      .card.featured {
+        grid-column: 1 / -1;
+        background: linear-gradient(
+            135deg,
+            rgba(91, 124, 250, 0.16),
+            rgba(45, 212, 191, 0.12)
+          ),
+          var(--panel);
+        border: 1px solid rgba(91, 124, 250, 0.35);
+        box-shadow: 0 22px 60px rgba(10, 13, 19, 0.45);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .card.featured::before {
+        content: "";
+        position: absolute;
+        inset: -40px -40px auto auto;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(circle, rgba(91, 124, 250, 0.35), transparent 60%);
+        filter: blur(2px);
+        pointer-events: none;
+      }
+
+      .marketplace-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 14px;
+        align-items: center;
+      }
+
+      .marketplace-url {
+        margin-top: 14px;
+        font-size: 12px;
+        color: var(--muted);
+        word-break: break-word;
+      }
+
+      .marketplace-url code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: rgba(18, 24, 38, 0.55);
+        color: #dbe6ff;
+      }
+
       .card h3 {
         margin-bottom: 12px;
         font-size: 18px;
@@ -222,41 +302,6 @@
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.4px;
-      }
-
-      .timeline {
-        display: grid;
-        gap: 16px;
-      }
-
-      .timeline-item {
-        display: flex;
-        gap: 14px;
-        align-items: flex-start;
-        padding: 16px;
-        border-radius: 16px;
-        border: 1px solid var(--line);
-        background: rgba(18, 24, 38, 0.6);
-      }
-
-      .dot {
-        width: 12px;
-        height: 12px;
-        margin-top: 6px;
-        border-radius: 50%;
-        background: linear-gradient(120deg, var(--accent), var(--accent-2));
-        flex: none;
-      }
-
-      .cta-panel {
-        background: linear-gradient(130deg, rgba(91, 124, 250, 0.18), rgba(45, 212, 191, 0.15));
-        border: 1px solid var(--line);
-        border-radius: 28px;
-        padding: 32px;
-        display: grid;
-        gap: 20px;
-        align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       }
 
       .policy-card {
@@ -320,6 +365,7 @@
         }
 
         header {
+          display: flex;
           flex-direction: column;
           align-items: flex-start;
         }
@@ -329,6 +375,11 @@
         html {
           scroll-behavior: auto;
         }
+
+        .cta-btn,
+        .ghost-btn {
+          transition: none;
+        }
       }
     </style>
   </head>
@@ -336,65 +387,64 @@
     <div class="page">
       <header>
         <div class="logo">
-          <span class="logo-mark">SA</span>
+          <span class="logo-mark">
+            <img
+              src="c2e91414-b239-496d-a359-caef0d92cf41.png"
+              alt="Search AI Global logo"
+              width="44"
+              height="44"
+              decoding="async"
+            />
+          </span>
           <span>Search AI Global</span>
         </div>
         <nav>
-          <a href="#platform">Platform</a>
-          <a href="#datasets">Datasets</a>
+          <a href="#dataset">Dataset</a>
           <a href="#access">Access</a>
-          <a href="#contact">Contact</a>
           <a href="#privacy-policy">Privacy</a>
         </nav>
-        <a class="cta-btn" href="mailto:support@searchaiglobal.com">Request Access</a>
+        <a class="cta-btn" href="mailto:support@searchaiglobal.com">Contact us</a>
       </header>
 
       <main>
         <section class="hero">
           <div>
-          <span class="badge">Premium data access to the AI policy and regulatory landscape.</span>
-            <h1>AI policy and regulation datasets.</h1>
+            <h1>AI Policy and Regulation Dataset</h1>
             <p>
-              Search AI Global provides curated access to global AI policy, regulation, and
-              enforcement datasets. Track governance shifts, benchmark jurisdictions, and build
-              intelligent compliance workflows with confidence.
+              Search AI Global provides curated access to a global AI policy, regulation, and
+              enforcement dataset to help users keep track of an ever shifting policy landscape.
+              Track governance shifts, benchmark jurisdictions, and build intelligent compliance
+              workflows with confidence.
             </p>
-            <div class="hero-actions">
-              <a class="cta-btn" href="mailto:support@searchaiglobal.com">Talk to our team</a>
-              <a class="ghost-btn" href="#datasets">View data coverage</a>
-            </div>
-          </div>
-          <div class="hero-card">
-            <h3></h3>
-            <p>
-              We're currently seeking industry validation and feedback on our datasets, data model & data access patterns. We'd love to hear what you want!
-            </p>
-            <div class="stat-grid">
-              <div class="stat">
-                <span>Datasets</span>
-                <strong>???</strong>
-              </div>
-              <div class="stat">
-                <span>Model / Schema</span>
-                <strong>???</strong>
-              </div>
-              <div class="stat">
-                <span>Access Patterns</span>
-                <strong>???</strong>
-              </div>
-            </div>
           </div>
         </section>
 
-        <section id="platform">
+        <section id="dataset">
           <div class="section-title">
             <div>
-              <span class="pill">Platform</span>
-              <h2>Our Tech</h2>
+              <span class="pill">Dataset</span>
+              <h2>Snowflake Marketplace</h2>
             </div>
-            <p>High-value datasets with RAG, ML and Search ready structure.</p>
           </div>
           <div class="grid">
+            <div class="card featured">
+              <span class="pill">Marketplace</span>
+              <h3 style="margin-top: 12px;">Open the listing</h3>
+              <p>
+                This is the fastest way to access the dataset directly in Snowflake.
+              </p>
+              <div class="marketplace-actions">
+                <a
+                  class="cta-btn"
+                  href="https://app.snowflake.com/marketplace/listing/GZTDZV656O"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open in Snowflake Marketplace
+                </a>
+                <a class="ghost-btn" href="mailto:support@searchaiglobal.com">Email support</a>
+              </div>
+            </div>
             <div class="card">
               <h3>Snowflake Data Lake</h3>
               <p>We process and store our data utilising a best in class data lake solution.</p>
@@ -414,75 +464,27 @@
           </div>
         </section>
 
-        <section id="datasets">
-          <div class="section-title">
-            <div>
-              <span class="pill">Datasets</span>
-              <h2>Coverage built for policy, regulation, and governance search.</h2>
-            </div>
-            <p>Gov PDFs, agency frameworks, industry safety policies, and OECD dashboards in one view.</p>
-          </div>
-          <div class="grid">
-            <div class="card">
-              <h3>Government policy PDFs</h3>
-              <p>National AI policies and regulations from official .gov sources.</p>
-            </div>
-            <div class="card">
-              <h3>Agency frameworks</h3>
-              <p>Guidance from NIST, the White House, and NTIA on AI governance.</p>
-            </div>
-            <div class="card">
-              <h3>Industry safety policies</h3>
-              <p>Safety charters and usage policies from leading AI labs.</p>
-            </div>
-            <div class="card">
-              <h3>State legislation & OECD</h3>
-              <p>US state-level AI bills plus OECD policy dashboards and publications.</p>
-            </div>
-          </div>
-        </section>
-
         <section id="access">
           <div class="section-title">
             <div>
               <span class="pill">Access</span>
-              <h2>Structured access for teams that cannot miss a signal.</h2>
-            </div>
-            <p>Flexible delivery options tailored to your stack.</p>
-          </div>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="dot"></div>
-              <div>
-                <h3>Snowflake Marketplace Passage Level Dataset</h3>
-                <p>Access our passage-level dataset via the Snowflake marketplace.</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="dot"></div>
-              <div>
-                <h3>File Format Access</h3>
-                <p>Access our passage-level dataset exported to parquet.</p>
-              </div>
+              <h2>Access Patterns</h2>
             </div>
           </div>
-        </section>
-
-        <section id="contact">
-          <div class="cta-panel">
-            <div>
-              <span class="pill">Contact</span>
-              <h2>Build your AI policy intelligence layer.</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>Chatbot</h3>
+              <p>Ask questions and explore policy and regulatory signals conversationally.</p>
+            </div>
+            <div class="card">
+              <h3>Snowflake Dataset Direct Access</h3>
               <p>
-                Tell us what jurisdictions and regulatory themes you track, and we will tailor an
-                access plan for your organization.
+                Work with the dataset directly in Snowflake.
               </p>
             </div>
-            <div>
-              <a class="cta-btn" href="mailto:support@searchaiglobal.com">Request access</a>
-              <p style="margin-top: 14px; color: var(--muted); font-size: 14px;">
-                Prefer a live walkthrough? Email us and we will set it up.
-              </p>
+            <div class="card">
+              <h3>Parquet File Format</h3>
+              <p>Access our dataset exported to parquet.</p>
             </div>
           </div>
         </section>
