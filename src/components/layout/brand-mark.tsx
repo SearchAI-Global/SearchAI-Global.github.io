@@ -6,7 +6,7 @@ export function BrandMark({ className }: { className?: string }) {
     return (
         <Link to="/" className={cx("flex items-center gap-2.5 outline-brand", className)}>
             <span
-                className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-brand-solid text-white shadow-xs-skeuomorphic ring-1 ring-transparent ring-inset"
+                className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-neutral-900 text-white shadow-xs-skeuomorphic ring-1 ring-neutral-800 ring-inset"
                 aria-hidden
             >
                 <svg viewBox="0 0 24 24" className="size-5" fill="none" xmlns="http://www.w3.org/2000/svg">

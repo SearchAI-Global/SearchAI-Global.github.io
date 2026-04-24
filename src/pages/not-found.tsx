@@ -11,7 +11,7 @@ export function NotFound() {
                 <div className="flex w-full max-w-3xl flex-col gap-8 md:gap-12">
                     <div className="flex flex-col gap-4 md:gap-6">
                         <div className="flex flex-col gap-3">
-                            <span className="text-md font-semibold text-brand-secondary">404 error</span>
+                            <span className="text-md font-semibold text-tertiary">404 error</span>
                             <h1 className="text-display-md font-semibold text-primary md:text-display-lg lg:text-display-xl">We can’t find that page</h1>
                         </div>
                         <p className="text-lg text-tertiary md:text-xl">Sorry, the page you are looking for doesn&apos;t exist or has been moved.</p>

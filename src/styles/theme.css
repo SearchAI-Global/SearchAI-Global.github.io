@@ -117,21 +117,35 @@
     --color-white: rgb(255 255 255);
     --color-black: rgb(0 0 0);
 
+    /* MAAP-inspired neutrals (~60% of UI: soft greys) */
+    --color-neutral-50: rgb(247 247 247);
+    --color-neutral-100: rgb(240 240 240);
+    --color-neutral-200: rgb(231 231 231);
+    --color-neutral-300: rgb(204 204 204);
+    --color-neutral-400: rgb(160 160 160);
+    --color-neutral-500: rgb(119 119 119);
+    --color-neutral-600: rgb(85 85 85);
+    --color-neutral-700: rgb(68 68 68);
+    --color-neutral-800: rgb(51 51 51);
+    --color-neutral-900: rgb(34 34 34);
+    --color-neutral-950: rgb(0 0 0);
+
     /* These will be inverted in dark mode. */
     --color-alpha-white: rgb(255 255 255);
     --color-alpha-black: rgb(0 0 0);
 
-    --color-brand-50: rgb(249 245 255);
-    --color-brand-100: rgb(244 235 255);
-    --color-brand-200: rgb(233 215 254);
-    --color-brand-300: rgb(214 187 251);
-    --color-brand-400: rgb(182 146 246);
-    --color-brand-500: rgb(158 119 237);
-    --color-brand-600: rgb(127 86 217);
-    --color-brand-700: rgb(105 65 198);
-    --color-brand-800: rgb(83 56 158);
-    --color-brand-900: rgb(66 48 125);
-    --color-brand-950: rgb(44 28 95);
+    /* Accent lime (~10%: CTAs, focus, brand moments) — centered on #ccfd50 */
+    --color-brand-50: rgb(252 255 235);
+    --color-brand-100: rgb(248 252 220);
+    --color-brand-200: rgb(241 252 190);
+    --color-brand-300: rgb(228 250 160);
+    --color-brand-400: rgb(214 253 120);
+    --color-brand-500: rgb(208 252 100);
+    --color-brand-600: rgb(204 253 80);
+    --color-brand-700: rgb(184 228 72);
+    --color-brand-800: rgb(150 200 55);
+    --color-brand-900: rgb(45 55 20);
+    --color-brand-950: rgb(26 36 10);
 
     /* LIGHT MODE VARIABLES */
 
@@ -298,7 +312,7 @@
     --color-text-secondary: var(--color-neutral-700);
     --color-text-secondary_hover: var(--color-neutral-800);
     --color-text-tertiary_hover: var(--color-neutral-700);
-    --color-text-brand-secondary: var(--color-brand-700);
+    --color-text-brand-secondary: var(--color-brand-900);
     --color-text-placeholder: var(--color-neutral-500);
     --color-text-brand-tertiary: var(--color-brand-600);
     --color-text-editor-icon-fg: var(--color-neutral-400);
@@ -311,7 +325,7 @@
     --color-text-quaternary_on-brand: var(--color-brand-300);
     --color-text-brand-tertiary_alt: var(--color-brand-600);
     --color-text-error-primary_hover: var(--color-red-700);
-    --color-text-brand-secondary_hover: var(--color-brand-800);
+    --color-text-brand-secondary_hover: var(--color-neutral-950);
 
     /* BORDER COLORS */
     --color-border-primary: var(--color-neutral-300);

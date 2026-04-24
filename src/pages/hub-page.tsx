@@ -33,9 +33,9 @@ export function HubPage() {
 
     return (
         <>
-            <section className="border-b border-secondary bg-primary py-16 md:py-24">
+            <section className="border-b border-secondary bg-secondary py-16 md:py-24">
                 <div className="mx-auto max-w-container px-4 md:px-8">
-                    <Badge type="pill-color" color="brand" className="mb-4">
+                    <Badge type="pill-color" color="gray" className="mb-4">
                         Golden source for AI policy
                     </Badge>
                     <h1 className="max-w-3xl text-display-md font-semibold tracking-tight text-primary md:text-display-lg lg:text-display-xl">
@@ -56,7 +56,7 @@ export function HubPage() {
                 </div>
             </section>
 
-            <section className="py-16 md:py-20">
+            <section className="border-b border-secondary bg-primary py-16 md:py-20">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <h2 className="text-display-xs font-semibold text-primary md:text-display-sm">Choose your path</h2>
                     <p className="mt-3 max-w-2xl text-lg text-tertiary">Three audiences. Same authoritative dataset—positioned for the workflow you care about.</p>
@@ -67,15 +67,15 @@ export function HubPage() {
                                     to={s.to}
                                     className={cx(
                                         "group flex h-full flex-col rounded-2xl border border-secondary bg-primary p-6 shadow-xs transition-shadow",
-                                        "hover:border-brand-secondary hover:shadow-md",
+                                        "hover:border-neutral-300 hover:shadow-md",
                                     )}
                                 >
-                                    <span className="flex size-12 items-center justify-center rounded-xl bg-utility-brand-50 text-utility-brand-600 ring-1 ring-utility-brand-200 ring-inset">
+                                    <span className="flex size-12 items-center justify-center rounded-xl bg-neutral-100 text-neutral-700 ring-1 ring-neutral-200 ring-inset">
                                         <s.icon className="size-6" />
                                     </span>
-                                    <h3 className="mt-4 text-lg font-semibold text-primary group-hover:text-brand-secondary">{s.title}</h3>
+                                    <h3 className="mt-4 text-lg font-semibold text-primary group-hover:text-secondary">{s.title}</h3>
                                     <p className="mt-2 flex-1 text-md text-tertiary">{s.description}</p>
-                                    <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-brand-secondary">
+                                    <span className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-tertiary group-hover:text-secondary">
                                         View page
                                         <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                                     </span>

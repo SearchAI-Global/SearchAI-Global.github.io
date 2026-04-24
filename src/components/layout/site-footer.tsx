@@ -10,19 +10,19 @@ export function SiteFooter() {
                     <span className="text-sm text-tertiary">{siteConfig.tagline}</span>
                 </div>
                 <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
-                    <Link to="/agents" className="text-brand-secondary hover:text-brand-secondary_hover">
+                    <Link to="/agents" className="text-tertiary hover:text-secondary">
                         Agents
                     </Link>
-                    <Link to="/finance" className="text-brand-secondary hover:text-brand-secondary_hover">
+                    <Link to="/finance" className="text-tertiary hover:text-secondary">
                         Finance
                     </Link>
-                    <Link to="/consulting" className="text-brand-secondary hover:text-brand-secondary_hover">
+                    <Link to="/consulting" className="text-tertiary hover:text-secondary">
                         Consulting
                     </Link>
-                    <Link to="/privacy" className="text-brand-secondary hover:text-brand-secondary_hover">
+                    <Link to="/privacy" className="text-tertiary hover:text-secondary">
                         Privacy
                     </Link>
-                    <a href={siteConfig.mailtoHref} className="text-brand-secondary hover:text-brand-secondary_hover">
+                    <a href={siteConfig.mailtoHref} className="text-tertiary hover:text-secondary">
                         {siteConfig.contactEmail}
                     </a>
                 </div>
