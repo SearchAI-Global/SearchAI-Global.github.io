@@ -9,7 +9,7 @@ import { cx } from "@/utils/cx";
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
     cx(
         "rounded-md px-3 py-2 text-sm font-semibold transition-colors outline-brand",
-        isActive ? "bg-primary text-secondary" : "text-tertiary hover:bg-primary_hover hover:text-secondary",
+        isActive ? "bg-secondary text-secondary" : "text-tertiary hover:bg-primary_hover hover:text-secondary",
     );
 
 const segments = [

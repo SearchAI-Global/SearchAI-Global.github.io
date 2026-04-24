@@ -6,7 +6,7 @@ export function PrivacyPage() {
 
     return (
         <div className="mx-auto max-w-container px-4 py-16 md:px-8 md:py-24">
-            <article className="prose prose-neutral max-w-3xl prose-headings:font-semibold prose-a:text-brand-secondary prose-a:no-underline hover:prose-a:underline">
+            <article className="prose prose-neutral max-w-3xl prose-headings:font-semibold prose-a:text-secondary prose-a:underline prose-a:decoration-neutral-300 prose-a:underline-offset-4 hover:prose-a:decoration-neutral-900">
                 <h1>Privacy notice</h1>
                 <p>Last updated: January 19, 2026</p>
 

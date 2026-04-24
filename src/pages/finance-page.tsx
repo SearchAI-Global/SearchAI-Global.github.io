@@ -34,7 +34,7 @@ export function FinancePage() {
         <>
             <section className="border-b border-secondary bg-primary py-16 md:py-20">
                 <div className="mx-auto max-w-container px-4 md:px-8">
-                    <Badge type="pill-color" color="brand" className="mb-4">
+                    <Badge type="pill-color" color="gray" className="mb-4">
                         Asset manager · Quant / risk
                     </Badge>
                     <h1 className="max-w-3xl text-display-md font-semibold tracking-tight text-primary md:text-display-lg">
@@ -68,7 +68,7 @@ export function FinancePage() {
                 </div>
             </section>
 
-            <section className="border-t border-secondary bg-secondary py-16 md:py-20">
+            <section className="border-t border-secondary bg-primary py-16 md:py-20">
                 <div className="mx-auto max-w-container px-4 md:px-8">
                     <h2 className="text-display-xs font-semibold text-primary">The solution: computational policy intelligence</h2>
                     <p className="mt-4 max-w-3xl text-lg text-tertiary">Structured fields and history designed for models, joins, and audit—not PDF archaeology.</p>
